@@ -5,7 +5,8 @@ package.domain = org.raideljc
 source.dir = .
 source.include_exts = py,png,jpg,kv,atlas,json,ttf
 version = 0.1
-requirements = python3,kivy, kivymd==1.2.0, cryptography, requests
+requirements = python3,kivy,pyjnius,cryptography,requests
+#, kivymd==1.2.0, cryptography, requests
 p4a.branch = develop
 #requirements = python3,kivy,pyjnius
 orientation = portrait
