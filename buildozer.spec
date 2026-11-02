@@ -1,4 +1,4 @@
-2[app]
+[app]
 title = DownTube
 package.name = downtube
 package.domain = org.raideljc
