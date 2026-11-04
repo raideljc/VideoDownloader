@@ -8,7 +8,7 @@ version = 0.1
 requirements = python3==3.11, kivy, pyjnius, cryptography
 
 #requirements = python3,kivy,cryptography,
- pyjnius==1.7.0
+# pyjnius==1.7.0
 #, cryptography
 #,cryptography#,requests 
 #pyjnius,cryptography,requests
