@@ -5,7 +5,9 @@ package.domain = org.raideljc
 source.dir = .
 source.include_exts = py,png,jpg,kv,atlas,json,ttf
 version = 0.1
-requirements = python3,kivy, pyjnius==1.7.0, cryptography
+requirements = python3,kivy,cryptography,
+ pyjnius==1.7.0
+#, cryptography
 #,cryptography#,requests 
 #pyjnius,cryptography,requests
 #, kivymd==1.2.0, cryptography, requests
