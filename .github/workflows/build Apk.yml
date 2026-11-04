@@ -37,6 +37,12 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
+      - name: Configure local recipes path
+       run: |
+        RECIPE_PATH="$(pwd)/p4a-recipes"
+        sed -i "s|^# p4a.local_recipes.*|p4a.local_recipes = $RECIPE_PATH|" buildozer.spec
+    # Si no hay línea comentada, agrega
+         #grep -q "^p4a.local_recipes" buildozer.spec || echo "p4a.local_recipes = $RECIPE_PATH" >> buildozer.spec
       - name: Clean previous build
         run: |
           rm -rf .buildozer
