@@ -10,6 +10,7 @@ requirements = python3==3.11.18,hostpython3==3.11.18,kivy,pyjnius,cryptography
 #requirements = python3,kivy,cryptography,
 # pyjnius==1.7.0
 #, cryptography
+android.ndk = 27b
 #,cryptography#,requests
 #, kivymd==1.2.0, cryptography, requests
 p4a.branch = develop
