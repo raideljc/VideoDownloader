@@ -37,21 +37,15 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-          
-     # - name: Configure local recipes path
-       #run: |
-        #RECIPE_PATH="$(pwd)/p4a-recipes"
-        #sed -i "s|^# p4a.local_recipes.*|p4a.local_recipes = $RECIPE_PATH|" buildozer.spec
-    # Si no hay línea comentada, agrega
-         #grep -q "^p4a.local_recipes" buildozer.spec || echo "p4a.local_recipes = $RECIPE_PATH" >> buildozer.spec
       - name: Patch python3 recipe to disable grp module
         run: |
+         echo "PWD: $(pwd)"
+         ls -la
+         ls -la p4a-recipes/python3/ || echo "NO EXISTE p4a-recipes/python3/"
          P4A_RECIPE_DIR="$HOME/.buildozer/android/platform/python-for-android/pythonforandroid/recipes/python3"
-         # Copia tu parche al directorio de la receta
          cp p4a-recipes/python3/disable-grp.patch "$P4A_RECIPE_DIR/"
-         # Modifica el __init__.py de la receta para agregar patches
-         echo "patches = ['disable-grp.patch']" >> "$P4A_RECIPE_DIR/__init__.py"
-      
+         echo "patches = ['disable-grp.patch']" >> "$P4A_RECIPE_DIR/__init__.py"          
+
       - name: Clean previous build
         run: |
           rm -rf .buildozer
