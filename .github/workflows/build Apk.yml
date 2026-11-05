@@ -37,14 +37,19 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-      - name: Patch python3 recipe to disable grp module
+      - name: Configure p4a local recipes
         run: |
-         echo "PWD: $(pwd)"
-         ls -la
-         ls -la p4a-recipes/python3/ || echo "NO EXISTE p4a-recipes/python3/"
-         P4A_RECIPE_DIR="$HOME/.buildozer/android/platform/python-for-android/pythonforandroid/recipes/python3"
-         cp p4a-recipes/python3/disable-grp.patch "$P4A_RECIPE_DIR/"
-         echo "patches = ['disable-grp.patch']" >> "$P4A_RECIPE_DIR/__init__.py"          
+           RECIPE_PATH="$(pwd)/p4a-recipes"
+           # Asegura que la línea exista en buildozer.spec (comentada o no)
+           if grep -q "^p4a.local_recipes" buildozer.spec; then
+             sed -i "s|^p4a.local_recipes.*|p4a.local_recipes = $RECIPE_PATH|" buildozer.spec
+           else
+             echo "p4a.local_recipes = $RECIPE_PATH" >> buildozer.spec
+           fi
+           echo "--- p4a.local_recipes configurado ---"
+           grep "p4a.local_recipes" buildozer.spec
+           echo "--- Contenido de p4a-recipes ---"
+           find p4a-recipes -type f
 
       - name: Clean previous build
         run: |
@@ -53,6 +58,7 @@ jobs:
 
       - name: Build APK
         run: |
+          buildozer android clean
           yes | buildozer -v android debug
 
       - name: Upload APK
