@@ -51,7 +51,14 @@ jobs:
            grep "p4a.local_recipes" buildozer.spec
            echo "--- Contenido de p4a-recipes ---"
            find p4a-recipes -type f
-
+      - name: Configure Ant path in buildozer.spec
+        run: |
+           if grep -q "^android.ant_path" buildozer.spec; then
+              sed -i "s|^android.ant_path.*|android.ant_path = /usr|" buildozer.spec
+           else
+              echo "android.ant_path = /usr" >> buildozer.spec
+           fi
+           grep "android.ant_path" buildozer.spec
       - name: Clean previous build
         run: |
           rm -rf .buildozer
