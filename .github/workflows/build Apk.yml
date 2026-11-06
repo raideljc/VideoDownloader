@@ -66,7 +66,7 @@ jobs:
 
       - name: Build APK
         run: |
-          
+          export PYO3_CROSS_LIB_DIR="$PWD/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/build/other_builds/python3/armeabi-v7a__ndk_target_21/python3/android-build"
           yes | buildozer -v android debug
 
       - name: Upload APK
