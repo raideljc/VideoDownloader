@@ -5,12 +5,19 @@ package.domain = org.raideljc
 source.dir = .
 source.include_exts = py,png,jpg,kv,atlas,json,ttf
 version = 0.1
-requirements = python3==3.11.18,hostpython3==3.11.18,python3-custom,kivy,pycryptodome
+requirements = python3==3.11.18,hostpython3==3.11.18,python3-custom,kivy,pyjnius,cryptography==3.4.8
 #requirements = python3==3.11.18,hostpython3==3.11.18,python3-custom,kivy==2.3.0,kivymd==1.2.0,pyjnius,pycryptodome
-#yt-dlp,ffpyplayer
-p4a.fork = T-Dynamos
-p4a.branch = ffmpeg_bin
-#p4a.branch = develop
+
+#requirements = python3==3.11.18,hostpython3==3.11.18,python3-custom,kivy,pyjnius,cryptography
+#requirements = python3==3.11, kivy, pyjnius, cryptography
+#requirements = python3==3.11.18,hostpython3==3.11.18,kivy,pyjnius,cryptography
+#requirements = python3,kivy,cryptography,
+# pyjnius==1.7.0
+#, cryptography
+android.ndk = 27b
+#,cryptography#,requests
+#, kivymd==1.2.0, cryptography, requests
+p4a.branch = develop
 p4a.local_recipes = ./p4a-recipes
 #requirements = python3,kivy,pyjnius
 orientation = portrait
