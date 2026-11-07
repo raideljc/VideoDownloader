@@ -17,6 +17,8 @@ requirements = python3==3.11.18,hostpython3==3.11.18,python3-custom,kivy,pyjnius
 android.ndk = 27b
 #,cryptography#,requests
 #, kivymd==1.2.0, cryptography, requests
+p4a.fork = T-Dynamos
+#p4a.branch = ffmpeg_bin
 p4a.branch = develop
 p4a.local_recipes = ./p4a-recipes
 #requirements = python3,kivy,pyjnius
