@@ -44,7 +44,7 @@ jobs:
           rm -rf .buildozer
           rm -rf $HOME/.buildozer
       - name: Deshabilitar parche problemático de Python
-       run: |
+        run: |
           # La ruta exacta donde Buildozer clona p4a
           PATCH_PATH="${{ github.workspace }}/.buildozer/android/platform/python-for-android/pythonforandroid/recipes/python3/patches/3.14_armv7l_fix.patch"
           if [ -f "$PATCH_PATH" ]; then
