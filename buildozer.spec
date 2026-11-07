@@ -5,7 +5,8 @@ package.domain = org.raideljc
 source.dir = .
 source.include_exts = py,png,jpg,kv,atlas,json,ttf
 version = 0.1
-requirements = python3,kivy==2.3.0,pyjnius,kivymd==1.2.0,yt-dlp,ffpyplayer,pycryptodome
+requirements = python3==3.11.18,hostpython3==3.11.18,python3-custom,kivy==2.3.0,pyjnius,yt-dlp,ffpyplayer,pycryptodome
+#requirements = python3,kivy==2.3.0,pyjnius,kivymd==1.2.0,yt-dlp,ffpyplayer,pycryptodome
 #ffpyplayer,,cryptography,requests,urllib3,charset-normalizer,idna,certifi
 #requirements = python3,kivy==2.3.0,kivymd==1.2.0,yt-dlp
 p4a.fork = T-Dynamos
