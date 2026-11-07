@@ -55,7 +55,7 @@ jobs:
           fi
       - name: Build APK
         run: |
-          buildozer android clean
+          
           yes | buildozer -v android debug
 
       - name: Upload APK
