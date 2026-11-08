@@ -8,8 +8,8 @@ version = 0.1
 #requirements = python3==3.11.18,hostpython3==3.11.18,python3-custom,kivy==2.3.0,kivymd==1.2.0,pyjnius,pycryptodome
 #requirements = python3==3.11.18,hostpython3==3.11.18,kivy==2.3.0,kivymd==1.2.0,pyjnius,pycryptodome
 #requirements = python3==3.11.18,hostpython3==3.11.18,python3-custom,kivy==2.3.0,kivymd==1.2.0,pyjnius,pycryptodome
-
-requirements = python3==3.11.18,hostpython3==3.11.18,python3-custom,kivy,pyjnius,kivymd,pycryptodome
+requirements = python3,kivy,pyjnius,kivymd,pycryptodome
+#requirements = python3==3.11.18,hostpython3==3.11.18,python3-custom,kivy,pyjnius,kivymd,pycryptodome
 p4a.fork = T-Dynamos
 p4a.branch = ffmpeg_bin
 #, cryptography
