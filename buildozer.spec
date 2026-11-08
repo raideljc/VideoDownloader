@@ -16,7 +16,7 @@ p4a.branch = ffmpeg_bin
 android.ndk = 27b
 #,cryptography#,requests
 #, kivymd==1.2.0, cryptography, requests
-p4a.branch = develop
+#p4a.branch = develop
 p4a.local_recipes = ./p4a-recipes
 #requirements = python3,kivy,pyjnius
 orientation = portrait
