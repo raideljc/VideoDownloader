@@ -27,8 +27,7 @@ jobs:
             zlib1g-dev libncurses5-dev libncursesw5-dev \
             libtinfo5 cmake libffi-dev libssl-dev \
             build-essential ccache ant
-      - name: Verify Ant
-        run: ant -version
+
       - name: Install Buildozer & Cython
         run: |
           python -m pip install --upgrade pip
