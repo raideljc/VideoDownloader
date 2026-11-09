@@ -40,6 +40,7 @@ jobs:
           
       - name: Clean previous build
         run: |
+          buildozer android clean
           rm -rf .buildozer
           rm -rf $HOME/.buildozer
 
