@@ -12,7 +12,7 @@ orientation = portrait
 requirements = python3==3.11.18,hostpython3==3.11.18,kivy==2.3.0,kivymd==1.2.0,pyjnius,pycryptodome
 
 
-android.ndk = 27b
+#android.ndk = 27b
 p4a.branch = develop
 p4a.local_recipes = ./p4a-recipes
 android.api = 33
