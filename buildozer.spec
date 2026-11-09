@@ -13,7 +13,7 @@ requirements = python3==3.11.18,hostpython3==3.11.18,python3-custom,kivy,kivymd,
 p4a.fork = T-Dynamos
 #p4a.branch = ffmpeg_bin
 #, cryptography
-android.ndk = 27b
+#android.ndk = 27b
 #,cryptography#,requests
 #, kivymd==1.2.0, cryptography, requests
 p4a.branch = develop
