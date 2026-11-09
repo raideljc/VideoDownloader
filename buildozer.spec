@@ -10,7 +10,7 @@ version = 0.1
 requirements = python3==3.11.18,hostpython3==3.11.18,python3-custom,kivy,kivymd,pyjnius,pycryptodome
 #requirements = python3,kivy,pyjnius,kivymd,pycryptodome
 #requirements = python3==3.11.18,hostpython3==3.11.18,python3-custom,kivy,pyjnius,kivymd,pycryptodome
-#p4a.fork = T-Dynamos
+p4a.fork = T-Dynamos
 #p4a.branch = ffmpeg_bin
 #, cryptography
 android.ndk = 27b
