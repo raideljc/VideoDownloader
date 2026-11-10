@@ -1,20 +1,26 @@
 [app]
-title = Video Downloader
-package.name = videodown
+title = Mi App Básica
+package.name = miappbasica
 package.domain = org.raideljc
 source.dir = .
-source.include_exts = py,png,jpg,kv,atlas,json
-version = 0.10.0
-#presplash.filename = %(source.dir)s/images/presplash.png
-icon.filename = %(source.dir)s/images/favicon.png
-orientation = portrait
+source.include_exts = py,png,jpg,kv,atlas,json,ttf
+version = 0.1
+requirements = python3==3.11.18,hostpython3==3.11.18,python3-custom,kivy,pyjnius,kivymd,pycryptodome
+#requirements = python3==3.11.18,hostpython3==3.11.18,python3-custom,kivy==2.3.0,kivymd==1.2.0,pyjnius,pycryptodome
 
-requirements = python3==3.11.18,hostpython3==3.11.18,kivy==2.3.0,kivymd==1.2.0,pyjnius,pycryptodome
-
-
+#requirements = python3==3.11.18,hostpython3==3.11.18,python3-custom,kivy,pyjnius,cryptography
+#requirements = python3==3.11, kivy, pyjnius, cryptography
+#requirements = python3==3.11.18,hostpython3==3.11.18,kivy,pyjnius,cryptography
+#requirements = python3,kivy,cryptography,
+# pyjnius==1.7.0
+#, cryptography
 #android.ndk = 27b
+#,cryptography#,requests
+#, kivymd==1.2.0, cryptography, requests
 p4a.branch = develop
 p4a.local_recipes = ./p4a-recipes
+#requirements = python3,kivy,pyjnius
+orientation = portrait
 android.api = 33
 android.minapi = 21
 #android.ndk = 23e 
