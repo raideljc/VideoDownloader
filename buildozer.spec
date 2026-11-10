@@ -1,10 +1,10 @@
 [app]
-title = Mi App Básica
-package.name = miappbasica
+title = Video Downloader
+package.name = videodown
 package.domain = org.raideljc
 source.dir = .
 source.include_exts = py,png,jpg,kv,atlas,json,ttf
-version = 0.1
+version = 0.10
 requirements = python3==3.11.18,hostpython3==3.11.18,python3-custom,kivy,pyjnius,kivymd,pycryptodome
 #requirements = python3==3.11.18,hostpython3==3.11.18,python3-custom,kivy==2.3.0,kivymd==1.2.0,pyjnius,pycryptodome
 
@@ -27,7 +27,7 @@ android.minapi = 21
 #android.ndk = 25b
 android.archs = arm64-v8a, armeabi-v7a
 android.accept_sdk_license = True
-android.permissions = INTERNET
+android.permissions = INTERNET, WRITE_EXTERNAL_STORAGE, READ_EXTERNAL_STORAGE, ACCESS_NETWORK_STATE
 
 [buildozer]
 log_level = 2
