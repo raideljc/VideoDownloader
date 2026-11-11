@@ -17,7 +17,17 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
+      - name: Fix apt mirror (Azure DNS outage fallback)
+        run: |
+           if ! getent hosts azure.archive.ubuntu.com >/dev/null 2>&1; then
+              echo "azure.archive.ubuntu.com no resuelve, cambiando a mirror público"
+              sudo sed -i 's|azure\.archive\.ubuntu\.com|mirrors.edge.kernel.org|g' /etc/apt/sources.list 2>/dev/null || true
+              [ -f /etc/apt/sources.list.d/ubuntu.sources ] && \
+                 sudo sed -i 's|azure\.archive\.ubuntu\.com|mirrors.edge.kernel.org|g' /etc/apt/sources.list.d/ubuntu.sources
+              [ -f /etc/apt/apt-mirrors.txt ] && \
+                 sudo sed -i 's|azure\.archive\.ubuntu\.com|mirrors.edge.kernel.org|g' /etc/apt/apt-mirrors.txt
+              sudo apt-get clean
+           fi
       - name: Install system dependencies
         run: |
           sudo apt-get update
