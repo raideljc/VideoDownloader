@@ -48,14 +48,6 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-          
-      - name: Prepare local python3 recipe
-        run: |
-           git clone --depth 1 --branch ffmpeg_bin https://github.com/kivy/python-for-android.git /tmp/p4a
-           mkdir -p p4a-recipes/python3
-           cp /tmp/p4a/pythonforandroid/recipes/python3/__init__.py p4a-recipes/python3/
-           sed -i '/3\.14_armv7l_fix\.patch/d' p4a-recipes/python3/__init__.py  
-      
       
       - name: Clean previous build
         run: |
