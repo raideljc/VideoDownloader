@@ -4,9 +4,8 @@ package.name = videodown
 package.domain = org.raideljc
 source.dir = .
 source.include_exts = py,png,jpg,kv,atlas,json,ttf
-version = 0.10.1
-requirements = python3==3.11.18,hostpython3==3.11.18,python3-custom,kivy,pyjnius,kivymd,yt-dlp,pycryptodome
-#ffmpeg
+version = 0.10.2
+requirements = python3==3.11.18,hostpython3==3.11.18,python3-custom,kivy,pyjnius,kivymd,yt-dlp,pycryptodome,ffmpeg
 #requirements = python3==3.11.18,hostpython3==3.11.18,python3-custom,kivy==2.3.0,kivymd==1.2.0,pyjnius,pycryptodome
 
 #requirements = python3==3.11.18,hostpython3==3.11.18,python3-custom,kivy,pyjnius,cryptography
